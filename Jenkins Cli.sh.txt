@@ -1,0 +1,19 @@
+#!/bin/bash
+#title       : Jenkins CLI
+#description :
+#author      : Hari
+#data        : 07/08/2020
+#version     : 1.0
+#usage       :
+#CopyRights  : Hari
+
+JENKINS_URL=http://3.80.250.194:8081/
+JENKINS_USER=admin
+#here we can give the password or authontication token.
+JENKINS_PASSWD=117d63651cb82c7c02fe49ef7161ff1a8a
+
+#Display all jobs
+echo "Display all jobs in jenkins:"
+echo "============================"
+java -jar jenkins-cli.jar -s "$JENKINS_URL" -auth "$JENKINS_USER:$JENKINS_PASSWD" build job2
+echo "----------------------------"
